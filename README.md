@@ -13,7 +13,7 @@
 
 ## Run php artisan serve to start local server
 
-## You can run the automataded test if you want - php artisan test
+## You can run the automated test if you want - php artisan test
 
 ## See the Api documentation accessing http://localhost:8000/api/documentation
 
