@@ -1,0 +1,94 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: Authentication API 
+paths:
+  /api/auth/login:
+    post:
+      tags:
+        - Authentication
+      summary: Authenticate a user
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+                example: example@example.com
+              password:
+                type: string
+                example: password
+      responses:
+        '202':
+          description: sucessfull login
+          schema:
+            type: object
+            properties:
+              token:
+                type: string
+                example: jwt-token
+              token_type:
+                type: string
+                example: bearer
+              message:
+                type: string
+                example: sucessfull login
+        '401':
+          description: Invalid credentials
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: Invalid credentials
+
+  /api/auth/authorize:
+    get:
+      tags:
+        - Authentication
+      summary: authorize a valid token
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: Authorization
+          in: header
+          description: Checks if the token is valid
+          required: true
+          type: string
+      responses:
+        '202':
+          description: Valid token
+          schema:
+            type: object
+            properties:
+              user_id:
+                type: integer
+                example: 1
+              role:
+                type: string
+                example: admin
+        '401':
+          description: Invalid token
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: Invalid token
+        '500':
+          description: Internal server error
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: Internal server error

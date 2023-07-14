@@ -27,11 +27,7 @@ class AuthController extends Controller
         $token = $this->authService->verifyUserCrendentials($credentials);
         
         if($token) {
-            return response()->json([
-                'token' => $token,
-                'token_type' => 'bearer',
-                'message' => 'login complete',
-            ]);
+            return response()->json(['token' => $token,'token_type' => 'bearer','message' => 'sucessfull login'],Response::HTTP_ACCEPTED);
         } else {
             return response()->json(['message' => 'Invalid credentials'], Response::HTTP_UNAUTHORIZED);
         }
@@ -61,7 +57,7 @@ class AuthController extends Controller
         } catch (Exception $e) {       
             
             if($e instanceof TokenInvalidException){
-                return response()->json(['error' => 'sorry , yout token user is not valid'], Response::HTTP_INTERNAL_SERVER_ERROR);
+                return response()->json(['error' => 'sorry , your token user is not valid'], Response::HTTP_INTERNAL_SERVER_ERROR);
             }
 
             return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);

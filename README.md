@@ -1,9 +1,13 @@
-## Create a database named system
+## run composer install to install necessary dependencies
 
-## verificar se precisa insirir senha para o database
+## Create your own local database with name system
+
+## copy the .env.example file to a new .env 
 
 ## Run migrations to create database users table - php artisan migrate
 
 ## Run seeders to populate users table - php artisan DB:seed
 
-## JWt secret php artisan jwt:secret
+## Run php artisan serve to start local server
+
+## Time spent : 120 min
