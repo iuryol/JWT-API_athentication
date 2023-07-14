@@ -10,4 +10,9 @@
 
 ## Run php artisan serve to start local server
 
+## You can run the automataded test if you want - php artisan test
+
+## See the Api documentation acessing http://127.0.0.1:8000/docs/api-docs.yaml
+
+
 ## Time spent : 120 min

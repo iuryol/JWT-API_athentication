@@ -2,8 +2,10 @@ swagger: '2.0'
 info:
   version: '1.0.0'
   title: Authentication API 
+basePath: /api/auth
+url: http://localhost:8000/docs/api-docs.yaml
 paths:
-  /api/auth/login:
+  /login:
     post:
       tags:
         - Authentication
@@ -49,7 +51,7 @@ paths:
                 type: string
                 example: Invalid credentials
 
-  /api/auth/authorize:
+  /authorize:
     get:
       tags:
         - Authentication
