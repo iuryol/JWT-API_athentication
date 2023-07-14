@@ -1,6 +1,9 @@
+
+## READ this to install the project correctly
+
 ## run composer install to install necessary dependencies
 
-## Create your own local database with name system
+## Create your own local database with name system (important)
 
 ## copy the .env.example file to a new .env 
 
@@ -12,7 +15,7 @@
 
 ## You can run the automataded test if you want - php artisan test
 
-## See the Api documentation acessing http://127.0.0.1:8000/docs/api-docs.yaml
+## See the Api documentation accessing http://localhost:8000/api/documentation
 
 
 ## Time spent : 120 min
