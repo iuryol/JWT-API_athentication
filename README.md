@@ -15,7 +15,7 @@
 
 ## You can run the automated test if you want - php artisan test
 
-## See the Api documentation accessing http://localhost:8000/api/documentation
+## See the Api documentation accessing /api/documentation
 
 
 ## Time spent : 120 min
