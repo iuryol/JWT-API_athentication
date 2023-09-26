@@ -3,7 +3,7 @@
 
 ## run composer install to install necessary dependencies
 
-## Create your own local database with name system (important)
+## Create your own local database named system (important)
 
 ## copy the .env.example file to a new .env 
 
